@@ -1,0 +1,158 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres  
+  namespace: airflow
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      containers:
+      - args:
+        - postgres
+        envFrom:
+        - configMapRef:
+            name: pgsql-airflow-metadata-db
+        - secretRef:
+            name: airflow-db-password
+        image: us.icr.io/mip-prod-namespace/postgres:latest
+        imagePullPolicy: Always
+        name: postgres
+        lifecycle:
+          preStop:
+            exec:
+              command: ["/home/postgres/backup.sh"]
+        volumeMounts:
+        - mountPath: /db_backup
+          name: pgdata
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+      - name: pgdata
+        persistentVolumeClaim:
+          claimName: postgres-data
+      initContainers:
+      - name: fixpermissions
+        image: alpine:latest
+        command: ["/bin/sh", "-c"]
+        args:
+          - chown 9999:9999 /mount;
+        volumeMounts:
+        - name: pgdata
+          mountPath: /mount
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: airflow-webserver
+  labels:
+    app: airflow-webserver
+  namespace: airflow
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: airflow-webserver
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: airflow-webserver
+    spec:
+      containers:
+      - args:
+        - afp-web
+        envFrom:
+        - secretRef:
+            name: airflow-core-fernet-key
+        - secretRef:
+            name: airflow-core-sql-alchemy-conn
+        - secretRef:
+            name: git-access-token
+        - secretRef:
+            name: ldap-bind-password
+        - configMapRef:
+            name: airflow-connection-strings
+        image: us.icr.io/mip-prod-namespace/airflow:latest
+        imagePullPolicy: Always
+        name: airflow-webserver
+        volumeMounts:
+        - mountPath: /opt/airflow/logs
+          name: air-logs
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+      - name: air-logs
+        persistentVolumeClaim:
+          claimName: airflow-logs
+      initContainers:
+      - name: fixpermissions
+        image: alpine:latest
+        command: ["/bin/sh", "-c"]
+        args:
+          - chown 9999:9999 /mount;
+        volumeMounts:
+        - name: air-logs
+          mountPath: /mount
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: airflow-scheduler 
+  namespace: airflow
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: airflow-scheduler
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: airflow-scheduler
+    spec:
+      containers:
+      - args:
+        - afp-sched
+        envFrom:
+        - secretRef:
+            name: airflow-core-fernet-key
+        - secretRef:
+            name: airflow-core-sql-alchemy-conn
+        - secretRef:
+            name: git-access-token
+        - secretRef:
+            name: ldap-bind-password
+        - configMapRef:
+            name: airflow-connection-strings
+        image: us.icr.io/mip-prod-namespace/airflow:latest
+        imagePullPolicy: Always
+        name: airflow-scheduler
+        volumeMounts:
+        - mountPath: /opt/airflow/logs
+          name: air-logs 
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      volumes:
+      - name: air-logs
+        persistentVolumeClaim:
+          claimName: airflow-logs
+      initContainers:
+      - name: fixpermissions
+        image: alpine:latest
+        command: ["/bin/sh", "-c"]
+        args:
+          - chown 9999:9999 /mount;
+        volumeMounts:
+        - name: air-logs
+          mountPath: /mount

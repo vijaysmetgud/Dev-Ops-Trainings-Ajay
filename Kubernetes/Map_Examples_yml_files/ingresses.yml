@@ -1,0 +1,41 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: airflow-webserver
+  namespace: airflow
+  annotations:
+   kubernetes.io/ingress.class: "private-iks-k8s-nginx"
+spec:
+  tls:
+  - hosts:
+    - airflow.map-mktsys-prod.limited-use.ibm.com
+    secretName: airflow-internal-domain-cert
+  rules:
+  - host: airflow.map-mktsys-prod.limited-use.ibm.com
+    http:
+      paths:
+      - path: /airflow
+        backend:
+          serviceName: airflow-webserver 
+          servicePort: 8080
+---
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: airflow-git-listener
+  namespace: airflow
+  annotations:
+   kubernetes.io/ingress.class: "private-iks-k8s-nginx"
+spec:
+  rules:
+  - host: airflow.map-mktsys-prod.limited-use.ibm.com
+    http:
+      paths:
+      - path: /webserver-git
+        backend:
+          serviceName: airflow-webserver
+          servicePort: 5000
+      - path: /scheduler-git
+        backend:
+          serviceName: airflow-scheduler
+          servicePort: 5000

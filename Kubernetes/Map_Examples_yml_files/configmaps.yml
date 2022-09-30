@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: airflow-connection-strings
+data:
+  BASE_URL: "http://airflow.map-mktsys-prod.limited-use.ibm.com/airflow"
+  BRANCH: "master"
+  STATSD_PREFIX: "prod"
+  LDAP_BIND_USER: "uid=C-TKFU897,c=us,ou=bluepages,o=ibm.com"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: pgsql-airflow-metadata-db
+data: 
+  AIRFLOW_DB: "airflow"
+  AIRFLOW_DB_USER: "airmeta"
+  NUM_BACKUPS: "192"
