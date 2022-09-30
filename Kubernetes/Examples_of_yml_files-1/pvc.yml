@@ -1,0 +1,14 @@
+apiversion: v1
+kind: PersistentVolumeClaim
+metadata: 
+  name: ajay-aws-cloud-disk
+spec:
+  accessmode:
+  - ReadWriteOnce:
+  resources:
+  requests:
+    storage: 40gb
+  storageclassname: ajay-data
+  volumemode: filesystem
+  
+    

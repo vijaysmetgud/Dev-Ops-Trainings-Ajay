@@ -1,0 +1,27 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-pod name of the pod
+spec:
+  containers:
+    - name: hello-ctrl – name of the container 
+      image: Jenkins  name of the images
+      ports: - container port number 
+        - containerPort: 8080
+
+
+---
+
+apiversion: V1
+Kind: Pod
+metadata: 
+   name: my-first-pod
+spec:
+  container:
+  - name: my-first-container
+    image: ngix
+    ports:
+    - container port: 80
+
+    
+
