@@ -1,0 +1,28 @@
+{
+    "builders": [
+      {
+        "type": "amazon-ebs",
+        "region": "us-east-1",
+        "source_ami": "ami-09d56f8956ab235b3",
+        "access key": "agdgdgermmet38849gk",
+        "secret key": "{{user 'secret key'}}",
+        "instance_type": "t2.micro",
+        "ssh_username": "ubuntu",
+        "ami_name": "image-from-packer"
+      }
+    ],
+    "provisioners": [
+      {
+        "type": "shell",
+        "script": "provision.sh"
+
+        or 
+
+        "type": "shell",
+        "inline": ["sudo apt update", "sudo apt get install apache2 -y"]
+      }
+    ]
+  }
+
+  ---------------------------------------------------------------
+
