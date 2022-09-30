@@ -1,0 +1,122 @@
+---
+
+ - name: Playbook for Installing Nginx
+   hosts: web
+   tasks:
+     - name: perform apt update
+       shell: apt update
+ 
+     - name: install nginx
+       shell: apt install nginx -y
+
+     - name: start Nginx
+       shell: service nginx start
+
+
+
+ - name: Playbook for Installing tomcat
+   hosts: app
+   tasks:
+      - name: perform apt update
+        shell: apt update
+ 
+      - name: install tomcat
+        shell: apt install tomcat -y
+
+      - name: start tomcat
+        shell: ./startup.sh 
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install apache server
+    yum:
+      name: httpd
+      state: present
+  - name: Ensure apache service is runnning
+    service:
+       name: httpd
+       state: started
+       enabled: yes
+
+
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: install tomcat 
+    yum: 
+      name: tomcat
+      state: present
+    service: ./startup.sh       
+
+---
+- hosts: appserver
+  become: yes
+  tasks:
+  - name: install tomcat
+    yum:
+      name: tomcat
+      state: present
+  - name: tomcat should be running        
+    service:
+      name: tomcat
+      state: started
+      enable: yes 
+
+---
+
+- hosts: appserver
+  become: yes
+  tasks:
+  - name: install nginx
+    yum:
+      name: nginx
+      state: present
+  - name: nginx should be running
+    service:
+      name: nginx
+      state: started
+      enable: yes 
+
+---
+
+- hosts: webserver
+  become: yes
+  tasks: 
+  - name: update the ubuntu
+    shell: apt-get update
+  - name: install ngix
+    shell: apt install nginx -y
+  - name: nginx start
+    shell: service start nginx
+  - name: enable nginx service
+    shell: service enable nginx
+
+---
+
+- hosts: ubuntu
+  become: yes
+  tasks:
+  - name: update ubuntu
+      apt:
+       name: update
+  - name: java-11-openjdk.x86_64 
+      apt: 
+        name: java-11-openjdk.x86_64
+        state: present
+        service: java --version
+
+  - name: downloads jenkins
+    get_url:
+      url: https://pkg.jenkins.io/redhat/jenkins.io.key
+      dest: /var/lib/jenkins
+  - name:
+    apt:
+      name: jenkins
+      state: preset
+      service: service start jenkins
+      service: service enable jenkins
+---
+
+
