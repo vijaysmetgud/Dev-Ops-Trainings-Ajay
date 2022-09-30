@@ -84,4 +84,5 @@ sh('docker build -t us.icr.io/mip-prod-namespace/mipdashboard:${BUILD_NUMBER} -f
                 sh('kubectl rollout restart deployment mipdashboard -n mipdashboard')
 
 
+
  

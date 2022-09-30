@@ -39,3 +39,4 @@ spec:
         backend:
           serviceName: airflow-scheduler
           servicePort: 5000
+          

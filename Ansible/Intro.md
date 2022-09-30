@@ -243,4 +243,3 @@ same way reverse if it is not present then yum will uninstall it will remove the
 
 
 
-

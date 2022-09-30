@@ -34,6 +34,7 @@
             "Description": "az of db",
             "Type": "AWS::EC2::AvailabilityZone::Name"
         }
+        
     },
     "Resources": {
         "ntier": {

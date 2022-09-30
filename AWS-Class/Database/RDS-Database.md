@@ -26,8 +26,5 @@ we can execute the query and retrieval of data.*
 
     ### non sql is dynamoDB
     
-
-
-
-
-
+    
+  

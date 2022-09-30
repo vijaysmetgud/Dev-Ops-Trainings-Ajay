@@ -12,5 +12,4 @@
 
 * kubeadm reset --> to remove the cluster
 
-
  

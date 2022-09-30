@@ -27,4 +27,5 @@
 6.  command to check yaml_file
     
         docker-compose ps yaml_file 
+        
 
