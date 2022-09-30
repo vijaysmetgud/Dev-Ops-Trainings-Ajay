@@ -29,8 +29,7 @@
     - **FASS - [function as a service]**
       - Lambda
 
-      
-
+     
 
 
 
