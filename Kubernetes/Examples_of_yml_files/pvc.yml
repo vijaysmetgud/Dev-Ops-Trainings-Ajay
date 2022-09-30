@@ -10,5 +10,4 @@ spec:
     storage: 40gb
   storageclassname: ajay-data
   volumemode: filesystem
-  
-    
+   
