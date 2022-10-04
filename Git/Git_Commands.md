@@ -417,7 +417,7 @@ in my case i created dev branch after default master branch so all commits has b
 
           git tag <commit_id>
  
-### 74. How to remove/unset a user-name and user-emal in global config
+### 74. How to remove/unset a user-name and user-email in global config
 
              git config --global --unset user.name
 
