@@ -203,7 +203,7 @@ same way reverse if it is not present then yum will uninstall it will remove the
 
 * eg:- ajay.apache-webserver ---> we should create roles like this...
 
-## To execute our roles in other machine like ansible nodes parralel 
+## To execute our roles in other machine like ansible nodes parallel  
 
  * - F --- Fore-Key execute parallel 
  ---
