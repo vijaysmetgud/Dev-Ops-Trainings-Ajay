@@ -49,7 +49,7 @@ We can use multiple app-name means multiple labels we can use like app-nginx, ap
 
 * service is layer 4 load balancer it knows only about ip address or node ports  
 
-* When pod dead and recreated another pod then that ip address will be changed so for that reason we will create one service to use with in the cluster to     communicate each other.
+* When pod dead and recreated another pod then that ip address will be changed so for that reason we will create one service to use with in the cluster to communicate each other.
 
 * A Service that identifies a set of Pods by using label selectors. 
    
