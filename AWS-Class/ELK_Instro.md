@@ -125,3 +125,8 @@ elasticsearch.hosts:"http://localhost:9200"-ELK host url
 
 * we can see the process of upgrading it..
 
+* current version used 7.17.0
+* upgrade to 7.17.0 to 8.4.2
+
+
+
