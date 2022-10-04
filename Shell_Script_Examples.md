@@ -53,7 +53,7 @@ fi
 ---
 
  
-6. # Shell Script to check SSL expiry dates and send a report 
+5. # Shell Script to check SSL expiry dates and send a report 
 
 ```
 #!/bin/bash
