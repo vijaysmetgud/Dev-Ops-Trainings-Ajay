@@ -151,6 +151,8 @@
 
        docker network connect mango-network jenkins-test
 
+       docker network <network_name><image_container_name>
+
 9. command to assign network while running image
 
        docker run -itd --name alpine-test --network=mango-network alpine:latest
