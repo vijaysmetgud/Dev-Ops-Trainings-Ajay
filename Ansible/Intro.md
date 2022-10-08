@@ -161,6 +161,34 @@ same way reverse if it is not present then yum will uninstall it will remove the
     * this is used to separate our playbook and task with two different file 
     * For an Examples :-
     * we can mention our all task details or information in the another yml file and just we needs to add the another yml file name in the playbook mentioning include key and value 
+
+* **Serial keyword** 
+  
+  * This gives you the ability to specify the number of hosts you want to execute against at a time on a per-playbook basis.
+  * by using serial keyword we run ansible-playbooks like batch wise 
+
+  example serial keyword:
+```
+---
+- hosts: webservers
+  serial:
+    - 1
+    - 2
+    - 25%
+    - 50%
+  tasks:
+    - name: Create Group for Webcontent
+      ansible.builtin.group:
+        name: webcontent
+        state: present
+    - name: Create Webcontent Dir
+      ansible.builtin.file:
+        path: /webcontent
+        state: directory
+        group: webcontent
+        owner: ansible-devops
+        mode: '2775' 
+```        
 ---
 
 ## Ansible Galaxy:-
@@ -170,8 +198,13 @@ same way reverse if it is not present then yum will uninstall it will remove the
 
 * why bcoz when we start our playbook it was simple then later it is turn to complex means in the playbook file we use many things like (group_var,host_vars,tags,handlers, etc:- many more so to look our playbook file simple. we use roles based playbook so that our playbook file looks simple by splitting into multiple files ..
 
+* when install roles or init roles what are the files generate.
 
-## ansible galaxy:- 
+![click here Roles images](./images/Roles.png) 
+
+![click here Roles images](./images/Roles1.png)  
+
+## ansible galaxy:-  
 
 * Ansible galaxy means sharing of roles or collections of roles, what this means.
 
@@ -203,9 +236,19 @@ same way reverse if it is not present then yum will uninstall it will remove the
 
 * eg:- ajay.apache-webserver ---> we should create roles like this...
 
-## To execute our roles in other machine like ansible nodes parallel  
+## To execute our roles/playbooks in other machine like ansible nodes parallel or at a time follow below option  
 
  * - F --- Fore-Key execute parallel 
+ * Ansible's parallel processes are known as forks,and the default number of forks is 5 in the ansible-cfg file. 
+ * You can change the default number of forks for every execution you do by editing the ansible.cfg file. 
+ * You can also change the number of forks on a per-command basis, either when running an Ansible ad-hoc command or an ansible-playbook command, by using the -f flag. This flag allows you to change the default to a higher or lower value depending on the group you are executing against.
+ * Example of -f or fork-key command:-
+  
+          ansible host -f forks_number -m module -a “arguments”
+          
+          ansible-playbook -f forks_number playbook.yml
+
+          ansible-playbook -f 10 playbook.yml 
  ---
 
 * **Set_facts** - we will use to set the variables in the yml file directley instead of using in var file
@@ -237,6 +280,7 @@ same way reverse if it is not present then yum will uninstall it will remove the
 * [Ansible Tower click here](https://docs.ansible.com/ansible/2.4/tower.html)
 
 ---
+
 
 
 
