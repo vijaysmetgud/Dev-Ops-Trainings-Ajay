@@ -47,7 +47,7 @@ build periodically, poll scm and build after other projects are built
 
 ## System Configurations:- 
 
-* this is useful to configure with in the sys tem like E-mal alert and slack alert configuration 
+* this is useful to configure with in the system like E-mal alert and slack alert configuration 
 
 ## Manage Plugin:-
 
@@ -71,7 +71,7 @@ this is useful for manage jenkins jobs to execute on different server called as 
    * Active Directory plugin 
 
 * will be installing under manage plugins so later when we want manage users and roles their access
-we needs to select RABS and AD under configure global security 
+we needs to select RBS and AD under configure global security 
 
 ## Manage Credentials:-
 
