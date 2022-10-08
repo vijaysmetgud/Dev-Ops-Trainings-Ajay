@@ -12,7 +12,7 @@ usage: packer [--version] [--help] <command> [<args>]
      * packer will initialize and download plugin binaries with this command if not we needs to download plugins many or with json file writing
 
 * **Build**:- 
-  * will run the templates annd build the image
+  * will run the templates and build the image
 
 * **fix**:-   
     * fixes the templates run from old  versions of packer to newer version or ensure that template run on newer version
