@@ -108,19 +108,19 @@ if it has any name space please mention it like below
          
          kubectl set image deploy <name_of_deployement> <name_of_container> <=app_name_with_version>
 
-        kubectl set image deploy nginx-deploy nginx- pod =nginx:1.9.1 --record [here have mentioned --record so it will the traction of deploy update/upgrade app version]
+        kubectl set image deploy nginx-deploy nginx- pod =nginx:1.9.1 --record [here have mentioned --record so it will the transaction of deploy update/upgrade app version]
 
 23. command to Rollback to the previous of deployment which we changed early to new version
 
         kubectl rollout undo deploy nginx-deploy nginx-pod =nginx
  
-         kubectl rollout undo deploy <name_of_deployement> <name_of_container> <=app_name>
+         kubectl rollout undo deploy <name_of_deployment> <name_of_container> <=app_name>
 
 24. command to Rollback to a specific revision
 
         kubectl rollout undo deploy nginx-deploy nginx-pod =nginx
 
-        kubectl rollout undo deploy  <name_of_deployement> <name_of_container> <=app_name> --to-revision=2 
+        kubectl rollout undo deploy  <name_of_deployment> <name_of_container> <=app_name> --to-revision=2 
 
 25. command to get history of rollout 
 
