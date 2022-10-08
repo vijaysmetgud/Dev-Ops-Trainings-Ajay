@@ -156,6 +156,8 @@ users or clients hit DNS (Route 53) it will direct to load balancer.
 then here Ingress Controller will handle request and route to Ingress.
 and here ingress will act like load balancer all the request will route to service and traffic is controlled by mentioning the rules in the ingress file then from service request will forward to particular pod to access our applications by using certain urls or path  
 ```
+* Ingress Flow of Images click here below:-
+![Ingress images flow](./images/Ingress.png)
 
 **Notes:-**
 
