@@ -10,4 +10,6 @@
 4. code spell checker - to check the spelling
 5. aws tool kit  - to work aws 
 6. cloudformation - for aws cloudformation 
+7. bash debug - for debug the shell script 
+
 
