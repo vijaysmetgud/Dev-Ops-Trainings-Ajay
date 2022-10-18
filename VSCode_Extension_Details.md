@@ -11,5 +11,8 @@
 5. aws tool kit  - to work aws 
 6. cloudformation - for aws cloudformation 
 7. bash debug - for debug the shell script 
+8. Terraform - for any cloud to deploy infra as code 
+
+
 
 
