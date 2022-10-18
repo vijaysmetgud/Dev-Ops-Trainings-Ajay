@@ -61,7 +61,7 @@ sonar location / where your project source(src) file there and build the job
 8. integrating with ansible
 9. integrating with packer 
 10. please refer this file - jenkinsfile_docker-cloud-k8s.
-
+11. integrating with terraform
 
 
 
