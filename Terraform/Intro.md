@@ -100,7 +100,7 @@
   * This is For Loop Concept 
   * to create multiple resources we can use this for each concept
 
-* ### Locals in Terraform:-
+* ### Locals are named (values) in Terraform:-
   * When you use Locals in the code, since you are reducing duplication of the same value
   * you also increase the readability of the code
   * local in Terraform doesn’t change its value once assigned.
