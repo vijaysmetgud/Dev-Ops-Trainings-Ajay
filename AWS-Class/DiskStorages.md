@@ -131,6 +131,13 @@
 - Enable versioning in s3 - will not loose data we will have both file
 - suspend versioning in s3 - we will loose data only new version file will be available 
 
+# S3 Policy 
+* setting this bucket policy we can restrict the users to access our s3 bucket for object or data.
+
+    * effect - allow/deny
+    * principle - all
+    * action - readonly/write only
+
 
 
 
