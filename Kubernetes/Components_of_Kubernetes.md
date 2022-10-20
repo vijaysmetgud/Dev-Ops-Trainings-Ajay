@@ -88,8 +88,7 @@ it is responsibility to speak each other pods inside the container
 -  it will forward the requests from service to pods to communicate each.
 -  it will take the responsibility of opening the port  between service and containers to talk to our application for users 
 -  kube-proxy is a network proxy that runs on each node in your cluster, implementing part of the Kubernetes Service concept.
--  kube-proxy maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your
-         cluster.
+-  kube-proxy maintains network rules on nodes. These network rules allow network communication to your Pods from network sessions inside or outside of your cluster.
     
 ---
 
