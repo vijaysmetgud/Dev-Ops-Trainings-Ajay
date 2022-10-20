@@ -12,7 +12,7 @@
     
         docker-compose down yaml_file_name 
 
-3.  command to build yaml_file
+3.  command to build yaml_file 
     
         docker-compose build yaml.file_name 
 
