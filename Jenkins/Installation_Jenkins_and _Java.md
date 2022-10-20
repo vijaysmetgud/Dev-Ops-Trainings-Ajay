@@ -17,7 +17,7 @@
 - java , javac 
 - java --version
 
---- 
+---  
 
 # How to install jenkins on Centos:-
 > Note:- in aws cloud should check under security groups 8080 http port number is enabled or not
