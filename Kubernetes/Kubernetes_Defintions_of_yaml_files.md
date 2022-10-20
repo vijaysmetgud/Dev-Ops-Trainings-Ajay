@@ -64,8 +64,7 @@ We can use multiple app-name means multiple labels we can use like app-nginx, ap
    
    * It is very important since if pod want to communicate each other then will use this service cluster ip address it is only for internal commutation purpose.
    
-   * ClusterIP Exposes the Service on a cluster-internal IP. Choosing this value makes the Service only reachable from within 
-   the cluster. This is the default ServiceType.
+   * ClusterIP Exposes the Service on a cluster-internal IP. Choosing this value makes the Service only reachable from within the cluster. This is the default ServiceType.   
 
 2. **node port:-** 
 
@@ -109,20 +108,20 @@ replicas,template,selector label,strategy,pod spec. many more etc:-
 
 * **Recreate:-** 
   ```
-  Recreate means for an example we have 4 apps ruuning in our evironment.it will distroy at a time all 4 apps and it will recreate new app/with new version at a time so here is we will have some time as down time for our application --- so this is not advisable in real time nor good concept. 
+  Recreate means for an example we have 4 apps running in our environment.it will destroy at a time all 4 apps and it will recreate new app/with new version at a time so here is we will have some time as down time for our application --- so this is not advisable in real time nor good concept. 
   ```
   
 * **Rolling Update:-** 
 ```
-Rolling Update means our apps will distory simultenanously like one by one at all at one time so in this way there wont be any down time for our application also it will upgrade the new version for our app --- it is advise to do in real time
+Rolling Update means our apps will destroy simultaneously like one by one at all at one time so in this way there wont be any down time for our application also it will upgrade the new version for our app --- it is advise to do in real time
 ```
 
 * **Blue-Green:-**
 ```
-Blue-Green means our old apps considering as Blue and our new apps which is going to upgrde is considering as Green.so until completing the procress of new version to our applications all the request will be routing to Blue apps.so when new version updating process as completed then we need to change in the service.yaml files our apps version and route the request to updated service.yml file, that is updated version for apps which is created newly apps called Green
+Blue-Green means our old apps considering as Blue and our new apps which is going to upgrade is considering as Green.so until completing the process of new version to our applications all the request will be routing to Blue apps.so when new version updating process as completed then we need to change in the service.yaml files our apps version and route the request to updated service.yml file, that is updated version for apps which is created newly apps called Green
 ```
 ```
-or another process is that we should create new service.yml file and route our request to pods from newly created service.yml file then later we need to decommisiion the old apps which is known as Blue apps 
+or another process is that we should create new service.yml file and route our request to pods from newly created service.yml file then later we need to decommission the old apps which is known as Blue apps 
 ```
 ```
 this is not advisable since we have down time to route our old service.yml file update the new apps/version 
@@ -187,8 +186,7 @@ and here ingress will act like load balancer all the request will route to servi
 
 * static volume means we  have to create volume manually and also we to have create pvc or mount that volume to claim that created volumes.
     
-* if we create volume with 3gb and 8gb and if we create pvc and asks for volumes then k8s will search where volumes is available so from 
-    there it  will check and assign the volumes.
+* if we create volume with 3gb and 8gb and if we create pvc and asks for volumes then k8s will search where volumes is available so from there it  will check and assign the volumes.
 
 * Example:- 
   ```
