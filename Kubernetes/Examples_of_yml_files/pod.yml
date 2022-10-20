@@ -4,9 +4,9 @@ metadata:
   name: hello-pod name of the pod
 spec:
   containers:
-    - name: hello-ctrl – name of the container 
-      image: Jenkins  name of the images
-      ports: - container port number 
+    - name: hello-ctrl 
+      image: Jenkins 
+      ports: 
         - containerPort: 8080
 
 
