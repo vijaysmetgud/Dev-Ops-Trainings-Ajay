@@ -478,7 +478,7 @@
 ### how to enable IPv6 support in docker?
 edit /etc/docker/daemon.json and set the ipv6 key to true.
 {
-"ipv6": true
+"ipv6": true 
 }
 
 ---
