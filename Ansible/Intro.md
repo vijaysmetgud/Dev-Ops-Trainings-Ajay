@@ -84,7 +84,7 @@
 
 ---
 
-* **command or shell is not idempotent (bcoze it execute the raw statement of linux)**
+* **command or shell is not idempotent (bcoz it execute the raw statement of linux)**
 
 ```
 Ansible to make idempotent we needs give or select exact statement of module to get ansible as idempotent.
