@@ -151,15 +151,14 @@
 
         git branch <branch name> 
 
-### 40. command to push the branch to remote repo which is created in the local repo and that branch will reflect in the remote repo
- 
+### 40. command to push the commit files to remote repo 
            git push origin <branch_name>
 
               git push origin dev
 
-### 41. command pull the request from remote repo to our local any branch we can pull to our local branch
+### 41. command pull the files from remote repo to our local 
 
-       git pull origin master
+         git pull origin master  
       
         git pull aliasname <branch_name>
 
@@ -341,8 +340,15 @@ in my case i created dev branch after default master branch so all commits has b
          git reset --mixed HEAD~1,2,3
 
    * here if we mention numbers 1,2,3 means last three files which is committed will  be changed to working area or Untracked files, last committed files will be changed to working area or Untracked files 
-             
- 
+
+                  OR
+
+        * git reset HEAD~
+        *  git reset HEAD^
+        *  git reset HEAD~1
+
+this above three commands will directly get back committed files to working area or Untracked files   
+
 ### 63. command to delete permanently files from commit area 
 
     
@@ -357,37 +363,31 @@ in my case i created dev branch after default master branch so all commits has b
          git reset --hard HEAD~1,2,3 
 
 * here if we mention numbers 1,2,3 means last three files which is committed will  be deleted permanently 
+   
 
-
-### 64. command to get files from commit area to working area or Untracked files 
-
-         git reset HEAD~
-         git reset HEAD^
-         git reset HEAD~1
-
-* this above three commands will directly get back committed files to working area or Untracked files      
-
-### 65. command to get files from staging area to working area or Untracked files
+### 64. command to get files from staging area to working area or Untracked files
 
          git reset 
          
              or
 
-         git reset <file_name>
+         git reset <file_name> <commit_id>
 
 
-### 66. command to remove file 
+### 65. command to remove file 
 
          git rm <file_name>
 
-### 67. To update all local branches
+### 66. To update all local branches
  
            git pull --all
 
 
-### 68. command to remove entire .git local repo
+### 67. command to remove entire .git local repo
 
-      rm -rf .git --> everything will deleted from our local repo
+       rm -rf .git 
+      
+      --> everything will deleted from our local repo
 
 
 ### 69. command to save working area or Untracked files in the stash for later completing the file fully
@@ -455,6 +455,8 @@ in my case i created dev branch after default master branch so all commits has b
 
            git checkout <branch_name>
 
+           git checkout origin/master
+           
            git merge <alias_name>/<branch_name>
 
            git merge origin/master
