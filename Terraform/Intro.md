@@ -184,6 +184,7 @@ For example, instead of defining 3 virtual machines all with their own separate 
       * Display Name
       * Application client id
       * Directory tenant id
+      * Object id
       
 
 * Then needs to take details from subscription 
@@ -192,6 +193,7 @@ For example, instead of defining 3 virtual machines all with their own separate 
 * Finally needs to create certificate and secrets 
 
     * create secrets
+    * copy secrets value
 
 * Should go into > ``IAM`` and selected created azure subscription and give access to terraform.
 
