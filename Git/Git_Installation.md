@@ -92,18 +92,3 @@
 - ssh -T git@github.com or ssh -T git@github.ibm.com
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
