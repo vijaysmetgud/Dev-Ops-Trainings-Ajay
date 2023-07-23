@@ -820,22 +820,44 @@ ls -R Display Files Recursively
            whereis ls
            whereis pwd
            whereis wget
+           whereis java
+           whereis jenkins
+           whereis maven
 
 ---
 
-# Set Path Variable in Linux Distributions:-
+# Environmental Variable/Path Variable in Linux Distributions:
+
+## Two Types Of Environmental Variable:
+
+1. **User Environment Variable**
+
+*  ~./bashrc
+
+   * if any variable or software path exporting in this ~./bashrc file means then only for that user/particular user can access it, not for other users who logging in the that system
+
+   * vi ~./bashrc => normal vi editor we can save
+   * export PATH=${PATH}:/opt/apache-maven-3.8.6/bin
+         or
+   * export PATH=$PATH:/opt/apache-maven-3.8.6/bin 
+* after add should run below command
+    * source ~./bashrc
+*  like above example needs to add to ./bashrc/user env variable           
 
 
-![Environmental Variable Rules click here](./Images/Environmental_Variable_Rules.png)
+2. **System Environment Variable**
 
+* /etc/environment
 
-* **Command to set Environment variable in Linux**
+  * if any variable or software path exporting in this /etc/environment file means then all the users can access it, who ever logging in the that system
 
-      export PATH=${PATH}:/opt/apache-maven-3.8.6/bin
+  * vi /etc/environment => normal vi editor we can save
+* ![Preview](./Images/Environmental_Variable.png)
+* after add should run below command
+    * source /etc/environment
+* like above example needs to add to env variable
+--- 
 
-                 or
-
-      export PATH=$PATH:/opt/apache-maven-3.8.6/bin
 
 * **Command to check all the programs where it is place**
 
@@ -894,10 +916,10 @@ starting of line /* and end of the line */
 
 * **command to edit sudoers file**
 
-          visudo
-
+          visudo => Nano Editor
+          To save file CTRL O  AND
+          To exit CTRL X 
 ---
-
 
 # Directory Commands:-
 
@@ -1627,6 +1649,13 @@ Command to eliminate the filed separator in the file – in the case when mentio
 
 ---
 
+# Daemon:
+
+* any programs/service which running backround is called daemon
+
+# Command to check users in Linux
+
+* cat /etc/passwd
 
 
 
