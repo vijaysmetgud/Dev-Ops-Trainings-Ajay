@@ -481,7 +481,14 @@ this above three commands will directly get back committed files to working area
 ### command to quit from git log or git reflog
    To exit type “q” or “z”. Or type “h” 
 
-   
+### command to restore changes from untracked files, means original files
+     git restore provider.tf
+
+### command to restore after executing git reset --hard HEAD^ permenent delete/remove to recover 
+Recover Local Changes from `git reset --hard` with `git reflog`
+How to Recover a Deleted File in Git – Revert Changes After a Hard Reset
+git checkout commit id or hash id
+git reflog - to take the hashid or commit id we can use it 
 
 
 
