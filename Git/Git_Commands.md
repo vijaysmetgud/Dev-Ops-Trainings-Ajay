@@ -478,7 +478,8 @@ this above three commands will directly get back committed files to working area
 * Squashing a commit means, simply making two commits into one commit or Combining commits
 * If you repeat this process multiple times, you can reduce n commit to a single one
 
-
+### command to quit from git log or git reflog
+   To exit type “q” or “z”. Or type “h” 
 
    
 
