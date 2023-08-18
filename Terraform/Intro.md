@@ -89,7 +89,7 @@
    * to copy some files or directories from our local where terraform is running to remote machine/ec2 which is running in the cloud 
 
 * ### Remote-exec in Terraform
-   * to run or execute some commands or scripts on remote resources which is already created or after creating it in the cloud 
+   * to run or execute some commands or scripts on remote resources which is already created or after creating it in the cloud ec2 machine 
    * EG:- ec2 machine 
 
 * ### Null-Resource in Terraform
@@ -117,8 +117,8 @@ For example, instead of defining 3 virtual machines all with their own separate 
 ```
 
 
-* ### Run-Triggers in Terraform
-   * run-triggers allows you to connect one or more workspace, these connections will allow to run in a queue in the workspace on successful apply on runs in any workspace 
+* ### Run-Triggers in Terraform 
+   * run-triggers allows you to connect one or more workspace, these connections will allow to run in a queue in the workspace on successful apply on runs in any workspace  
 
 * ### Modules in Terraform
    * means we can use modules for deploying infrastructure  with multiple env, keeping source file same location nor in different location just specifying source - location of .tf files in modules  and also multiple .tf files 
