@@ -1,172 +1,170 @@
 
-# Docker Commands:-
+# Docker Commands:
 
-## Docker Information Commands:-
+## Docker Information Commands:
 
-1. command to check docker is install
+* command to check docker is install
     
        docker 
 
-2. command to check docker version 
+* command to check docker version 
     
        docker version or docker --version
 
-3. command to check information about docker 
+* command to check information about docker 
     
        docker info - will print all the system information
 
-4. command to clean docker system
+* command to clean docker system
     
        docker system prune 
        
        To clean all resources which are dangling or not associated with any docker containers
 
-5. command To Log in to a Docker registry 
+* command To Log in to a Docker Hub registry 
     
         docker login
 
-6. command To logout from Docker Hub Registry
+* command To logout from Docker Hub Registry
     
            docker logout
 
-7. ### Daemon 
+### Daemon: 
+  * service or system that runs background always 
   * Run the persistent process that manages containers, it runs background always
        * var/log/docker.log 
 
 
-8. All the files will store in this location - **/var/lib/docker/**   
+* All the files will store in this location called: 
 
----
+   `/var/lib/docker/`   
 
-## Run Commands:-
+## Run Commands:
 
 **Synatx:-**
 
     docker run -itd --name <container_name> <image_name:version> 
 
-1. command to run the images in the ibmcloud registry
+* command to run the images in the ibmcloud registry
    
        docker run --name airflow-test -ti -d us.icr.io/map-dev-namespace/airflow:latest tail -f /dev/null
 
-2. command to run docker images
+* command to run docker images
    
        docker run --name postgres-test -ti -d localhost/postgres:latest tail -f /dev/null
----
 
-## Pull Commands:-
+## Pull Commands:
 
-1. command pull the images from docker hub/registry/  or private registry 
+* command pull the images from docker hub/registry/  or private registry 
 
        docker pull <registry/repository/domain_name and image_name>
 
-2. command to pull the images from the ibmcloud  container registry
+* command to pull the images from the ibmcloud  container registry
    
        docker pull us.icr.io/map-dev-namespace/airflow:latest
----
-## Push Commands:-
 
-1. command to push the image into registry/repository 
+## Push Commands:
+
+* command to push the image into registry/repository 
    
        docker push <registry/repository/domain_name and image_name:verion/tag
    
        docker push mmumshad/my-custom-app 
 
-2. command to push the docker images ibmcloud registry 
+* command to push the docker images ibmcloud registry 
 
        docker push us.icr.io/map-dev-namespace/postgres:latest
----
 
-## Container or Image List Commands:-
+## Container or Image List Commands:
 
-1. command to List the docker images
+* command to List the docker images
    
        docker images 
 
-2. command to list the images externally means in registry/repository/docker hub
+* command to list the images externally means in registry/repository/docker hub
    
        docker search <images_name>
  
-3. command to list top process of the container
+* command to list top process of the container
     
        docker top ContainerName/ID
 
-4. command to give list of images id which is stopped
+* command to give list of images id which is stopped
    
        docker images -q 
 
-5. command to search image list of top 10
+* command to search image list of top 10
    
        docker search <image_Name> | head -10
 
-6. command to give full details with out terminating
+* command to give full details with out terminating
     
          docker search --no-trunc <image_name>
 
 
-## Docker  build commands:-
+## Docker  build commands:
 
-1. command to build docker image
+* command to build docker image
    
        docker build -t localhost/postgres -f DockerfilePostgres .
 
        docker build -t [username/registory/repositry_name]<image-name>[:tag/version] -f  <dockerfile_name><dockerfile_path>
----
 
-## Network Command:-
+## Network Command:
 
-1.  command to create docker network 
+* command to create docker network 
     
         docker create network <network_name>
     
         docker create network mongo-network 
 
-2.  command to list of docker network
+* command to list of docker network
     
         docker network ls  
 
-3. command to check docker network configuration/network build details
+* command to check docker network configuration/network build details
    
        docker network inspect <network_name>
         docker network inspect bridge
 
-4. command to list all possible way for network
+* command to list all possible way for network
    
        docker network connect --help
 
-5. command to remove the network specified
+* command to remove the network 
     
        docker network rm <network_Name>
 
-6. command to remove all unused docker network
+* command to remove all unused docker network
     
        docker network prune network name
 
-> 7. docker network create -d bridge --subnet 10.1.0.0/24 mybridge
-   Here, docker network create is the command to create a network. mybridge is the network name.
-   -d is to specify the type of driver we want to use for this network. bridge is the type of driver.
-   --subnet 10.1.0.0/24 is the CIDR range. So 2 power 32-24 = 254 containers can be connected to this network.
-   > 
+* docker network create -d bridge --subnet 10.1.0.0/24 mybridge
 
-8. command to assign network to image which is created already
+```
+Here, docker network create is the command to create a network. mybridge is the network name.-d is to specify the type of driver we want to use for this network. bridge is the type of driver. --subnet 10.1.0.0/24 is the CIDR range. So 2 power 32-24 = 254 containers can be connected to this network.
+```
+
+* command to assign network to image which is created already
 
        docker network connect mango-network jenkins-test
 
        docker network <network_name><image_container_name>
 
-9. command to assign network while running image
+* command to assign network while running image
 
        docker run -itd --name alpine-test --network=mango-network alpine:latest
----
-## Port Commands:-
 
-1. docker run -itd --name nginx-test -p 8081:8080 nginx:latest
+## Port Commands:
+
+* docker run -itd --name nginx-test -p 8081:8080 nginx:latest
    
        8081 - on left side port is for host 
    
        8080 - on right side port is for container 
 
 
-> 2. docker run -p 8080:8080 -p 50000:50000 jenkins:alpine: Starting docker on the port number 8080. here -p indicates assigning host OS port-number to docker container(jenkins)
+* docker run -p 8080:8080 -p 50000:50000 jenkins:alpine: Starting docker on the port number 8080. here -p indicates assigning host OS port-number to docker container(jenkins)
    Here left side 8080 is host OS port number, right side 8080 is container port number.
    Here we are assigning 8080 port number of Host OS to 8080 of container port number.
    Same for 50000 as well, which is for jenkins API.
