@@ -39,7 +39,7 @@ to set Environmental we can use
          the port, while running docker image we need give -p to publish the port to docker image run  
 
 ## ADD:-
-* if we want to copy some files from the urls to the destiny of ur docker containers, then we can use it.
+* if we want to copy some files from the urls to the destiny of ur docker image, then we can use it.
 * Example Below:-
 
    * ADD http://foo.com/bar.go /tmp/main.go
