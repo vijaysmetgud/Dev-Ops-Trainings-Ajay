@@ -18,7 +18,7 @@
 
 * RC means instead of creating pod we will use RC so that it will contain extra features like replicas means it will create pods as many we mention replicas=3 etc:- 
 
-* In pods we cannot do any cluster environment so instead of pod we are creating another yaml file called replication controller in that we mention 3 replicas, selector label so it will create 3 pods with mentioned label then we can use in cluster environment
+* In pos we cannot do any cluster environment so instead of pod we are creating another yaml file called replication controller in that we mention 3 replicas, selector label so it will create 3 pods with mentioned label then we can use in cluster environment
 
 * RC- disadvantages is we cannot enhance or upgrade the application version and also we can mention only one label not more
 
@@ -257,11 +257,4 @@ files will have some changes that changes will take place by default through con
 ## Daemon Set:- 
        daemon set means if we want to create same copy of a pod on every node when we required we do that using that daemon set 
 ---    
-
-
-
-
-
-
-
 

@@ -11,3 +11,5 @@
 * [Installing Kubernetes Document Click Here](https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/)
 
 * kubeadm reset --> to remove the cluster
+
+

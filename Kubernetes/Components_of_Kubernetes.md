@@ -29,7 +29,9 @@
 
 ## scheduler:-
 
-- scheduler is responsible for creation pod 
+- scheduler is responsible for creation pod
+* scheduler see something new in etcd then it is responsiblity to do that activity means create new two pods
+scheduler will that job 
 
 -  scheduler work is to check always with apiserver any pod request we got or any pod i need to schedule it, it will be keep checking it with apiserver.
 -  scheduler will see the pod configuration which is got from apiserver and it will decide that so many pods need to go to particular node .
@@ -43,6 +45,7 @@
 ## Controller-manager:- 
 
 - controller is responsible for maintaining  state what we asked for the count like 3 nginx or pod  or killing also
+* controller is responsible for maintining the state what we asked for. 
 
 -  Controller manager Responsible for noticing and responding when nodes go down.
 -  it will take the responsibility of checking the nodes incase if nodes goes down and if pod dies inside the node then it will inform to apiserver 
@@ -50,6 +53,12 @@
 -  Watches for Job objects that represent one-off tasks, then creates Pods to run those tasks to completion.
 -  Populates the Endpoints object (that is, joins Services & Pods).
 
+
+## Cloud controller manager 
+* which is well known for cloud concept like eks aks gks so when we want to work with cloud of our k8s cluster 
+then we should know about this component called cloud controller manager 
+it has intengligent of cloud 
+it is implementd by microsoft 
 ---
  
 
@@ -59,6 +68,9 @@
 
 -  it is a database for all master node components 
 -   it will store all our yaml files or our commands which we send to master kubernetes 
+* etcd is memory of k8s, if we delete the etcd, then k8s forgets everything
+* if we want to take back up of k8s then take etcd 
+* etcd is not developed by k8s, it is third party tool, 
 
       
 ---
@@ -69,7 +81,13 @@
 
 ##  Kubelet:-
 
+This service runs on nodes, reads the container manifests, and ensures the defined containers are started and running.
+* kubelet is agent for control plane 
+* when ever scheduler wants something it will speak to kubelet 
+* if kubelet is down then master will think that node is down
+* if control plane want to communicate with nodes means kubelet should be there if not possbile to communicate 
 - kubelet will update the master saying the status pods is so on so
+
   
 -  An agent that runs on each node in the cluster. It makes sure that containers are running in a Pod.
 -  kubelet will be asking the apiserver that i am working on this node like node1 and node2 so is there any work me like is there any pod for me.
@@ -82,6 +100,7 @@
 
 - kubeproxy all about networks  responsible for networking of pod 
 it is responsibility to speak each other pods inside the container
+and to access our containre inside pod it something called as networking 
 
 
 -  Manages the network and assign the ip address to the pod to communicate each other.
@@ -95,6 +114,9 @@ it is responsibility to speak each other pods inside the container
 
 ## Container runtime:- 
 
+* container runtime needs to have or implement CRI to communicate
+
+
 * Docker
 
 ---
@@ -103,6 +125,11 @@ it is responsibility to speak each other pods inside the container
 ## kubectl 
 
   * is command line tool for kubernetes cluster to communicate with apiserver.
+  * kubectl is a way to communicate with k8s 
+  * there are two ways to communicate with k8s 
+     * kubectl commuicatting with k8s api server best way is yaml 
+     * Rest Api , means we create Rest APi through commandline or using python languages 
+     * Rest Api communicating best way is json 
   
    ---
 
