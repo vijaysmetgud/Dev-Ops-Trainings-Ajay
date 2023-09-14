@@ -45,7 +45,7 @@ We can use multiple app-name means multiple labels we can use like app-nginx, ap
 
 * service is responsible to expose our application to outside the world means it will allow our pods to access from internet or out side of our cluster environment.
 
-* service ip address which will never change and also it is stored in etcd
+* service ip address which will never change and also it is stored in etcd, still control plane is up service will not go down
 
 * service is layer 4 load balancer it knows only about ip address or node ports  
 
