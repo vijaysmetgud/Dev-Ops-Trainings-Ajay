@@ -83,7 +83,7 @@ We can use multiple app-name means multiple labels we can use like app-nginx, ap
    
 3. **LoadBalancer:-** 
  
-   * LoadBalancer Exposes the Service externally using a cloud provider's load balancer. and also its too costly.  
+   * LoadBalancer Exposes the Service through external IP using a cloud provider's load balancer. and also its too costly.  
 
    * Here the problem is if we have one service then we can give our load balancer name  or  dns name created with route 53
 
