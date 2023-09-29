@@ -254,6 +254,7 @@ files will have some changes that changes will take place by default through con
 
 ---
 
+
 ## Daemon Set:- 
        daemon set means if we want to create same copy of a pod on every node when we required we do that using that daemon set 
 ---    

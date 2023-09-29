@@ -5,12 +5,12 @@ metadata:
   namespace: airflow
 spec:
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteOnce 
   resources:  
     requests:
       storage: 40Gi
   storageClassName: ibmc-file-gold
-  volumeMode: Filesystem
+  volumeMode: Filesystem 
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
