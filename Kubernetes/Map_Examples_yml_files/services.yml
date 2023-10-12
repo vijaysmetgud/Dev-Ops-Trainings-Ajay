@@ -18,7 +18,7 @@ metadata:
   name: airflow-scheduler
   namespace: airflow
 spec:
-  ports:
+  ports: 
   - name: 5000-tcp
     port: 5000
     protocol: TCP
@@ -38,7 +38,7 @@ spec:
     protocol: TCP
     targetPort: 8080
   - name: 5000-tcp
-    port: 5000
+    port: 5000 
     protocol: TCP
     targetPort: 5000
   selector:

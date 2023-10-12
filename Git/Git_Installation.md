@@ -90,5 +90,49 @@
 ### 7. To test connection it is working, it has connection between github repo and our local repo
 
 - ssh -T git@github.com or ssh -T git@github.ibm.com
+---
 
+## codesquareZone:
+
+```
+git config user.name "codesquareZone"
+git config user.email "ajaykumar.devopsclouds@gmail.com"
+
+[user]
+        name = codesquareZone
+        email = ajaykumar.devopsclouds@gmail.com
+
+        eval `ssh-agent -s`
+        ssh-add ~/.ssh/id_rsa_codesquareZone
+```
+---
+
+## AjayKumarRamesh:
+
+```
+git config user.name "AjayKumarRamesh"
+git config user.email "ajaykumarramesh5@gmail.com"
+
+[user]
+        name = AjayKumarRamesh
+        email = ajaykumarramesh5@gmail.com
+
+eval `ssh-agent -s`
+ssh-add ~/.ssh/id_rsa_AjayKumarRamesh
+```
+---
+
+## AjayShady:
+
+```
+git config user.name "AjayShady"
+git config user.email "ajaykumar.matters@gmail.com"
+
+[user]
+        name = AjayShady
+        email = ajaykumar.matters@gmail.com
+
+   eval `ssh-agent -s`
+   ssh-add ~/.ssh/id_rsa_AjayShady
+```
 
