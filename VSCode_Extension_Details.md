@@ -1,8 +1,7 @@
+
 ## VSCode Extension Details:-
----
 
-
-* ### Needs add all this below extension when ur working on 
+### Needs add all this below extension when ur working on 
 
 1. vscode-yaml-validation - Ansible
 3. yaml extension - for all the yaml file includes(k8s,ansible and CI/CD)
@@ -14,10 +13,4 @@
 9. VScode icon - for visual studio code designs
 10. Docker approved by microsoft - for docker files
 11. Azure Devops - Azure Pipelines Microsoft microsoft.com
-
-
-
-
-
-
 
