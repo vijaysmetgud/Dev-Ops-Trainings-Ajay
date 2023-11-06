@@ -16,7 +16,7 @@
 * cloudformation - for aws cloudformation 
 
 * bash debug - for debug the shell script
- 
+
 * Terraform approved by hashicorp => for any cloud to deploy infra as code:
 ![Preview](./Images/vscode3.png)
 
@@ -26,6 +26,6 @@
 * Docker approved by microsoft => for docker files:
 ![Preview](./Images/vscode2.png)
 
-* Azure Devops => Azure Pipelines Microsoft microsoft.com:
+* Azure Devops => Azure Pipelines Approved by Microsoft 
     ![Preview](./Images/vscode.png)
 
