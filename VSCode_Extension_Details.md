@@ -13,6 +13,9 @@
 8. Terraform approved by hashicorp - for any cloud to deploy infra as code
 9. VScode icon - for visual studio code designs
 10. Docker approved by microsoft - for docker files
+11. Azure Devops - Azure Pipelines Microsoft microsoft.com
+
+
 
 
 
