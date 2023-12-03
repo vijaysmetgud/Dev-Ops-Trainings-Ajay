@@ -180,7 +180,14 @@
 
 ### 44. command to rename the branch in the local repo
 
+    git branch -m master test
     git branch -m <old_branch_name><new_branch_name> 
+    
+          or 
+
+    git branch -M master
+    git branch -M <new_branch_name>
+     
 
 ### 45. command to rename the branch in the remote repo 
 
