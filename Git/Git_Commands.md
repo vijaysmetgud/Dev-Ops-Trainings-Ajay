@@ -124,11 +124,11 @@
      git push origin master
 
 
-### 36. command to set by default push to any branch in the future
+### 36. command to set by default push to particular remote and branch
    
 * git push -u origin master 
    
-      * if we set -u then not required to mention origin master, just directly we can push the contain. default to master or any branch 
+      * if we set -u then not required to mention origin master, just directly we can push the contain. default to master 
 
    * git push --set-upstream <branch_name> 
    
@@ -187,7 +187,7 @@
 
     git branch -M master
     git branch -M <new_branch_name>
-     
+
 
 ### 45. command to rename the branch in the remote repo 
 
@@ -267,6 +267,9 @@ in my case i created dev branch after default master branch so all commits has b
 ### 55. command to list all the branch including remote branch
 
          git branch -a 
+              or
+         git branch --all      
+            
 
 * > when you want some else repository to copy into our own repository just we need to click on fork option on right in that person repository 
  so that copy of that person repository will create in our repository we can do in UI, if i dont have access to that particular repo then after i fork click then ill be the owner of the repo 
