@@ -241,6 +241,12 @@ in my case i created dev branch after default master branch so all commits has b
 
           git diff <commit_id1> <commit_id2>
 
+          git diff 7e6b43a 4e5adcd
+          git diff 7e6b43a..4e5adcd
+          git diff 7e6b43a^ 4e5adcd
+          git diff <older_Commit_id> <Newer_commit_id>
+          git diff <older_Commit_id>..<Newer_commit_id>
+
 ### 53. command to check difference between file and commit id
 
          git diff <commit_id> <file_name>
@@ -415,7 +421,7 @@ this above three commands will directly get back committed files to working area
 
 ### 73. command to provide tags to commits 
 
-          git tag <commit_id>
+          git tag <commit_id> 
  
 ### 74. How to remove/unset a user-name and user-email in global config
 
