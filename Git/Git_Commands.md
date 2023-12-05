@@ -432,6 +432,8 @@ this above three commands will directly get back committed files to working area
 ### 73. command to provide tags to commits 
 
           git tag <commit_id> 
+
+###           
  
 ### 74. How to remove/unset a user-name and user-email in global config
 
@@ -443,7 +445,7 @@ this above three commands will directly get back committed files to working area
 
 ### 75. How do you undo the last commit       
 
-             git revert <commit id>
+             git revert <commit id> 
 
 ### 76. how to get back the deleted files after staged or committed 
 
