@@ -6,7 +6,10 @@
 
 * yaml extension => for all the yaml file includes(k8s,ansible and CI/CD):
 ![Preview](./Images/vscode4.png)
-![Preview](./Images/vscode6.png)
+![Preview](./Images/vscode6.png) 
+* And also below ansible extension only for ansible
+* Ansible  
+![Preview](./Images/vscode7.png)
 
 * code spell checker => to check the spelling:
 ![Preview](./Images/vscode1.png)
@@ -27,5 +30,10 @@
 ![Preview](./Images/vscode2.png)
 
 * Azure Devops => Azure Pipelines Approved by Microsoft 
-    ![Preview](./Images/vscode.png)
+![Preview](./Images/vscode.png)
+* Azure cloud ARM template to work => Azure Resource Manager 
+![Preview](./Images/vscode8.png)
+
+* Azure Cloud Bicep to work => install Bicep
+![Preview](./Images/vscode9.png)
 
