@@ -37,3 +37,5 @@
 * Azure Cloud Bicep to work => install Bicep
 ![Preview](./Images/vscode9.png)
 
+* Azure cli command to work => install Azure CLI Tools
+![Preview](./Images/vscode10.png)
