@@ -39,3 +39,7 @@
 
 * Azure cli command to work => install Azure CLI Tools
 ![Preview](./Images/vscode10.png)
+
+* Azure powershell to work with powershell commands => install PowerShell 
+![Preview](./Images/vscode11.png)
+
