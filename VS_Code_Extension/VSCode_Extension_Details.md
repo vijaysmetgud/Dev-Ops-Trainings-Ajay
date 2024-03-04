@@ -43,3 +43,5 @@
 * Azure powershell to work with powershell commands => install PowerShell 
 ![Preview](./Images/vscode11.png)
 
+* Azure functions to work with functions service of azure and we can create any functions
+![Preview](./Images/vscode12.png)
