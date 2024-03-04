@@ -43,5 +43,10 @@
 * Azure powershell to work with powershell commands => install PowerShell 
 ![Preview](./Images/vscode11.png)
 
-* Azure functions to work with functions service of azure and we can create any functions
-![Preview](./Images/vscode12.png)
+* These below extension if required then install if not no:
+    * Azure functions to work with functions service of azure and we can create any functions
+    ![Preview](./Images/vscode12.png)
+    * Azure App Services to work with azure app services
+    ![Preview](./Images/vscode13.png)
+    * Azure Spring Apps to work with azure spring app services
+    ![Preview](./Images/vscode14.png)
