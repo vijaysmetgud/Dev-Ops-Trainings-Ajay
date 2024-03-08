@@ -50,3 +50,7 @@
     ![Preview](./Images/vscode13.png)
     * Azure Spring Apps to work with azure spring app services
     ![Preview](./Images/vscode14.png)
+
+* Docker Compose to work with docker compose yaml files needs to install 
+![Preview](./Images/vscode15.png)
+
