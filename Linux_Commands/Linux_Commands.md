@@ -72,11 +72,6 @@ f = to display full format listing
            fg % 1
            
            fg  <pid>
-      
-
-- **Command to check total cpu is running on the system/CPU information**
-
-         lscpu
 
 * **command to show our process in tree structure**
 
@@ -533,9 +528,9 @@ ls -R Display Files Recursively
 
 * **Command to find the file or directory**
 
-      find /usr/logs/ -type f -name '*.log '-exec ls -l {} \;
+      find /usr/logs/ -type f -name '*.log' -exec ls -l {} \;
 
-      find /usr/logs/ -type f -name ‘*.log ‘-exec chmod 600 {} \;
+      find /usr/logs/ -type f -name '*.log' -exec chmod 600 {} \;
 
       find (path) -type f -name -exec ls -l {}\;
 
@@ -578,9 +573,14 @@ ls -R Display Files Recursively
 
           touch <file.1><file.2><file.3>
 
-* **Command to check different between two files**
+* **Command to check different between two files hash**
 
-        Md5sum <file_name>
+        Md5sum <file_name> 
+
+           or 
+    
+        md5sum <file_name> and <file_name>
+
 ---
 
 # Command to check lock/unlock/status of user_id:- 
@@ -668,10 +668,15 @@ ls -R Display Files Recursively
 
 * **Command to find the given OS is 32 bit or 64 bit**
 
-       arch or uname
+       arch 
 
        Output is i686 is 32 bit 
        x86 is 64 bit 
+
+* **Command to find the os name
+
+      uname
+
 
 * **Command to find the given os version**
 
@@ -1230,8 +1235,10 @@ all the mount filesystem will be stored location or will contain all the mount i
 # AWK Commands:-
 
 * NR or NF - is to print number of record in the lines
+  * NR means number of records in the line like row counting
 
 * print $1,2,3--soo,,onnn. - is the print number of record/field in the lines
+   * Print $3 means print the field number 3 means counting number of colomun 
 
 
 * **Command checked files system**
@@ -1302,7 +1309,7 @@ Command to eliminate the filed separator in the file – in the case when mentio
 
 * **Command to open file like cat command in sed**
 
-           Sed ‘’ filename
+           Sed "" filename 
 
 ![Preview](./Images/sed.png)
 
