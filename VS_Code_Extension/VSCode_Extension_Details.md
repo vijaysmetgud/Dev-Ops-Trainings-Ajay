@@ -28,6 +28,7 @@
 * aws tool kit  - to work aws
 
 * cloudformation - for aws cloudformation 
+![Preview](./Images/vscode19.png)
 
 * bash debug - for debug the shell script
 

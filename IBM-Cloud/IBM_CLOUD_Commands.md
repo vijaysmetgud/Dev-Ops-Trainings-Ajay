@@ -11,7 +11,7 @@
    ibmcloud plugin install container-service
    
    ibmcloud plugin install container-registry
-   
+   V
    ibmcloud plugin install observe-service
    
    ibmcloud plugin install secrets-manager

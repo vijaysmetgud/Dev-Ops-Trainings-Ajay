@@ -15,7 +15,7 @@ echo "1.$server_name,$ip_address,$ip_address,$ip_address" >> server-info.csv
 logs=$(find /tmp/logs -type f -name '*.log' -mtime 30 -exec rm -f {} \;)
 echo "logs older then 30 day is deleted: ${logs}
 ```
----
+--- 
 
 
 3. # Cpu utilization is more then 80% needs to get an alert
