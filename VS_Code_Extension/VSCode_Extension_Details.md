@@ -85,3 +85,10 @@ VSCode Extension Details
 ![Preview](./Images/vscode13.png)
 * Azure Spring Apps to work with azure spring app services
 ![Preview](./Images/vscode14.png)
+
+
+### Note
+* adding k8s below file in the yaml schema, will be problem for writing docker compose and azure devops pipelines, so i have commented so when ever we writing k8s manifest then i needs to uncomment and write it so that k8s will give predefined steps if not no.
+
+`"Kubernetes": ["/*.yaml","/*.yml"]`
+
